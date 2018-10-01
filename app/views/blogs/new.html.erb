@@ -1,0 +1,7 @@
+<%= form_for @blog do |f| %>
+
+Title:<%= f.text_field :title %><br>
+Content: <%= f.text_area :body %><br>
+
+<%= f.submit "Create Post" %>
+<% end %>

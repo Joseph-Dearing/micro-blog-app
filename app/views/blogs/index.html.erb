@@ -1,0 +1,12 @@
+<h1>Welcome !</h1>
+<p><%= @user %></p>
+<% @blogs.each do |p| %>
+<div class="posts">
+ <div>What would you like to say to the world? 
+ 
+ <%= button_to "Create A Post", new_blog_path, :method => "get" %>
+ <%= button_to "Delete Post", blog_path(p.id), method: :delete, data: {confirm: "Delete Post?"}%>
+ <a href="/blogs/<%=p.id%>/edit"><b>Edit Post</b></a><br>
+ 
+ <%= p.body %></div>
+ <% end %>

@@ -1,0 +1,10 @@
+.nav{
+    background: $navbarColor !important;
+    border: none;
+    a {
+      color: rgb(0, 174, 255) !important;
+    }
+    a:hover{
+      color: $navbarColor !important;
+    }
+  }

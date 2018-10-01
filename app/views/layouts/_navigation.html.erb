@@ -1,12 +1,9 @@
 <ul class="nav nav-tabs">
   <li><%= link_to 'Home', root_path%></li>
-  <li><a href="#">Users</a></li>
-  <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Dropdown <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      ...
-    </ul>
-  </li>
+
+  <% if user_signed_in? %>
+  <li><%= link_to "Create A Post", new_blog_path, :method => "get" %></li>
+ <li><a href="/signout/">Sign Out</a></li>
+  <% end %>
+
 </ul>

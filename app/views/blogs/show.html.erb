@@ -1,0 +1,16 @@
+<h2><%= @blog.title %></h2>
+
+<p><%= @blog.body %></p><br>
+
+<h4>Comments</h4>
+
+<% @blog.comments.each do |c|%>
+    <%= c.content %><br>
+<%end%>
+
+<% if user_signed_in? %>
+    <%= form_for([@blog, @blog.comments.build]) do |f| %>
+        <%= f.text_field :content %><br />
+        <%= f.submit "Comment" %>
+    <% end %>
+<% end %>

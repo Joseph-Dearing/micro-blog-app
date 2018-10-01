@@ -1,0 +1,10 @@
+<h1> Edit Comment<%=@blog.id%></h1>
+
+<%= form_for @blog do |f| %>
+
+Title:<%= f.text_field :title %><br>
+Content: <%= f.text_field :body %><br>
+
+
+<%= f.submit "Update Comment" %>
+<% end %>

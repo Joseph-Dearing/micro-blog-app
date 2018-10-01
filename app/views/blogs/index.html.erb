@@ -8,6 +8,9 @@
 
  <%= button_to "Delete Post", blog_path(p.id), method: :delete, data: {confirm: "Delete Post?"}%>
  <a href="/blogs/<%=p.id%>/edit"><b>Edit Post</b></a><br>
+ <b><%= p.title %></b><br>
+ <%= p.body %></div><br><br>
+
+ <a href="/blogs/<%=p.id%>"><b>Comment</b></a><br>
  
- <%= p.body %></div>
  <% end %>
